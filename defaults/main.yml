@@ -1,5 +1,8 @@
-dmd_install_dir: /usr/local/dmd
+# Path to the directory where DMD will be installed
+dmd_install_dir: /usr/local
 
+# DMD version to install
 dmd_version: 2.098.1
 
-old_compilers: []
+# list of old DMD versions to uninstall
+dmd_old_compilers: []

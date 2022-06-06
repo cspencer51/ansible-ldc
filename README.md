@@ -11,14 +11,14 @@ Variables to deploy role are listed below.
 
 - dmd_install_dir
 - dmd_version
-- old_compilers
+- dmd_old_compilers
 
 DMD install variables can be specified as follows:
 
 ```yml
-dmd_install_dir: /usr/local/dmd
+dmd_install_dir: /usr/local
 dmd_version: 2.098.1
-old_compilers: [2.098.0]
+dmd_old_compilers: [2.098.0]
 ```
 
 Example Playbook
@@ -33,9 +33,9 @@ Example Playbook
   tags:
     - dmd
   vars:
-    dmd_install_dir: /usr/local/dmd
+    dmd_install_dir: /usr/local
     dmd_version: 2.098.1
-    old_compilers: [2.098.0]
+    dmd_old_compilers: [2.098.0]
 ```
 
 License
