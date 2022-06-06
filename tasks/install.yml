@@ -4,9 +4,9 @@
 # installation tasks.
 #
 
-- include: unzip.yml
+- include_tasks: unzip.yml
 
-- include: tar.yml
+- include_tasks: tar.yml
 
 - name: Create install directory if it does not exist
   file:
