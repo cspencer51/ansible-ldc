@@ -1,13 +1,13 @@
-- include_tasks: debug.yml
+- import_tasks: debug.yml
   when: debug | default(false)
   tags: debug
 
-- include_tasks: validate.yml
+- import_tasks: validate.yml
   tags: validation
 
-- include_tasks: install.yml
+- import_tasks: install.yml
   become: true
   tags: installation
 
-- include_tasks: remove.yml
+- import_tasks: remove.yml
   tags: remove
