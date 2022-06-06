@@ -19,6 +19,5 @@
     msg="{{ item }} is a mandatory variable"
   when: item is not defined
   with_items:
-    - awscli_configuration
-    - awscli_profiles
-    - awscli_users
+    - dmd_install_dir
+    - dmd_version

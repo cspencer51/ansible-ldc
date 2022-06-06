@@ -1,7 +1,7 @@
-- name: Remove awscli
+- name: Remove dmd
   file:
     path: "{{ dmd_install_dir }}/dmd.{{ item }}"
     state: absent
   with_items:
     - "{{ old_compilers }}"
-  when: item.state is defined and item.state == "absent"
+  when: item is defined
