@@ -9,6 +9,6 @@
     var="{{ item }}"
   when: item is defined
   with_items:
-    - dmd_configuration
-    - dmd_profiles
-    - dmd_users
+    - ldc_configuration
+    - ldc_profiles
+    - ldc_users

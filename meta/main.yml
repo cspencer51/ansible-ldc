@@ -1,8 +1,8 @@
 ---
 galaxy_info:
-  role_name: dmd
+  role_name: ldc
   author: cspencer51
-  description: Install and configure DMD
+  description: Install and configure LDC
   company: Emsi Burning Glass
   min_ansible_version: 2.0
   platforms:
@@ -14,8 +14,11 @@ galaxy_info:
       versions:
         - all
   galaxy_tags:
-    - dmd
+    - compiler
+    - d
     - dlang
+    - ldc
+    - llvm
 
   dependencies: []
 

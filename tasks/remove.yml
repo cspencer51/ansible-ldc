@@ -1,7 +1,7 @@
-- name: Remove dmd
+- name: Remove ldc
   file:
-    path: "{{ dmd_install_dir }}/dmd.{{ item }}"
+    path: "{{ ldc_install_dir }}/ldc.{{ item }}"
     state: absent
   with_items:
-    - "{{ dmd_old_compilers }}"
+    - "{{ ldc_old_compilers }}"
   when: item is defined

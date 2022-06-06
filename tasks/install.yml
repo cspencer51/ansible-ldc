@@ -10,18 +10,18 @@
 
 - name: Create install directory if it does not exist
   file:
-    path: "{{ dmd_install_dir }}/dmd.{{ dmd_version }}"
+    path: "{{ ldc_install_dir }}/ldc.{{ ldc_version }}"
     state: directory
     mode: '0755'
 
-- name: download dmd
+- name: download ldc
   get_url:
-    url: "https://s3.us-west-2.amazonaws.com/downloads.dlang.org/releases/2021/dmd.{{ dmd_version }}.linux.tar.xz"
-    dest: "/tmp/dmd.{{ dmd_version }}.linux.tar.xz"
+    url: "https://github.com/ldc-developers/ldc/releases/download/v{{ ldc_version }}/ldc2-{{ ldc_version }}-linux-x86_64.tar.xz"
+    dest: "/tmp/ldc2-{{ ldc_version }}-linux-x86_64.tar.xz"
 
-- name: unzip dmd
+- name: unzip ldc
   unarchive:
-    src: "/tmp/dmd.{{ dmd_version }}.linux.tar.xz"
-    dest: "{{ dmd_install_dir }}/dmd.{{ dmd_version }}"
-    creates: "{{ dmd_install_dir }}/dmd.{{ dmd_version }}/dmd2"
+    src: "/tmp/ldc2-{{ ldc_version }}-linux-x86_64.tar.xz"
+    dest: "{{ ldc_install_dir }}/ldc2-{{ ldc_version }}-linux-x86_64"
+    creates: "{{ ldc_install_dir }}/ldc2-{{ ldc_version }}-linux-x86_64/bin"
     copy: false

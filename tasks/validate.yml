@@ -19,5 +19,5 @@
     msg="{{ item }} is a mandatory variable"
   when: item is not defined
   with_items:
-    - dmd_install_dir
-    - dmd_version
+    - ldc_install_dir
+    - ldc_version

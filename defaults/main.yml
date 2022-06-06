@@ -1,8 +1,8 @@
-# Path to the directory where DMD will be installed
-dmd_install_dir: /usr/local
+# Path to the directory where LDC will be installed
+ldc_install_dir: /usr/local
 
-# DMD version to install
-dmd_version: 2.098.1
+# LDC version to install
+ldc_version: 1.29.0
 
-# list of old DMD versions to uninstall
-dmd_old_compilers: []
+# list of old LDC versions to uninstall
+ldc_old_compilers: []
