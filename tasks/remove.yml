@@ -3,5 +3,5 @@
     path: "{{ dmd_install_dir }}/dmd.{{ item }}"
     state: absent
   with_items:
-    - "{{ old_compilers }}"
+    - "{{ dmd_old_compilers }}"
   when: item is defined
