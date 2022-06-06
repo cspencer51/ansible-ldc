@@ -11,6 +11,7 @@ Variables to deploy role are listed below.
 
 - dmd_install_dir
 - dmd_version
+- old_compilers
 
 DMD install variables can be specified as follows:
 
