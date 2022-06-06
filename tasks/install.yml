@@ -23,5 +23,5 @@
   unarchive:
     src: "/tmp/dmd.{{ dmd_version }}.linux.tar.xz"
     dest: "{{ dmd_install_dir }}/dmd.{{ dmd_version }}"
-    creates: "{{ dmd_install_dir }}/dmd.{{ dmd_version }}"/dmd2
+    creates: "{{ dmd_install_dir }}/dmd.{{ dmd_version }}/dmd2"
     copy: false
