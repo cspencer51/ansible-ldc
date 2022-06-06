@@ -1,0 +1,12 @@
+- name: "[Ubuntu|Debian] install tar"
+  apt:
+    name: tar
+    state: present
+  when: ansible_distribution == "Ubuntu" or ansible_distribution == "Debian"
+
+
+- name: "[CentOS|RHEL|Amazon] install tar"
+  apt:
+    name: tar
+    state: present
+  when: ansible_distribution == "CentOS" or ansible_distribution == "Red Hat Enterprise Linux" or ansible_distribution == "Amazon"

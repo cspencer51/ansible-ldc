@@ -1,0 +1,21 @@
+---
+# file: tasks/install.yml
+#
+# installation tasks.
+#
+
+- include: unzip.yml
+
+- include: tar.yml
+
+- name: download dmd
+  get_url:
+    url: "https://s3.us-west-2.amazonaws.com/downloads.dlang.org/releases/2021/dmd.{{ dmd_version }}.linux.tar.xz"
+    dest: "/tmp/dmd.{{ dmd_version }}.linux.tar.xz"
+
+- name: unzip dmd
+  unarchive:
+    src: "/tmp/dmd.{{ dmd_version }}.linux.tar.xz"
+    dest: "{{ dmd_install_dir }}"
+    creates: "{{ dmd_install_dir }}/dmd.{{ dmd_version }}"
+    copy: false

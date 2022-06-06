@@ -1,0 +1,22 @@
+---
+galaxy_info:
+  role_name: dmd
+  author: cspencer51
+  description: Install and configure DMD
+  company: Emsi Burning Glass
+  min_ansible_version: 2.0
+  platforms:
+    - name: Ubuntu
+      versions:
+        - 18.04
+        - 20.04
+    - name: Debian
+      versions:
+        - all
+  galaxy_tags:
+    - dmd
+    - dlang
+
+  dependencies: []
+
+  license: MIT

@@ -1,0 +1,14 @@
+---
+# file: tasks/debug.yml
+#
+# debug tasks.
+#
+
+- name: debug
+  debug:
+    var="{{ item }}"
+  when: item is defined
+  with_items:
+    - dmd_configuration
+    - dmd_profiles
+    - dmd_users
