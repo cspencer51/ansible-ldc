@@ -9,7 +9,7 @@
 - include: tar.yml
 
 - name: Create install directory if it does not exist
-  ansible.builtin.file:
+  file:
     path: "{{ dmd_install_dir }}/dmd.{{ dmd_version }}"
     state: directory
     mode: '0755'
@@ -23,5 +23,5 @@
   unarchive:
     src: "/tmp/dmd.{{ dmd_version }}.linux.tar.xz"
     dest: "{{ dmd_install_dir }}/dmd.{{ dmd_version }}"
-    creates: "{{ dmd_install_dir }}/dmd.{{ dmd_version }}"
+    creates: "{{ dmd_install_dir }}/dmd.{{ dmd_version }}"/dmd2
     copy: false
