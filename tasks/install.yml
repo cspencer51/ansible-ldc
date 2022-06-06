@@ -16,6 +16,6 @@
 - name: unzip ldc
   unarchive:
     src: "/tmp/ldc2-{{ ldc_version }}-linux-x86_64.tar.xz"
-    dest: "{{ ldc_install_dir }}/ldc2-{{ ldc_version }}-linux-x86_64"
-    creates: "{{ ldc_install_dir }}/ldc2-{{ ldc_version }}-linux-x86_64/bin"
+    dest: "{{ ldc_install_dir }}"
+    creates: "{{ ldc_install_dir }}/ldc2-{{ ldc_version }}-linux-x86_64"
     copy: false
